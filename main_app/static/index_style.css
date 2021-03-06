@@ -1,27 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root {
     --headerFont: 'IBM Plex Serif', serif;
     --bodyFont: 'Roboto', sans-serif;
-}
-
-.header {
-    font-family: var(--headerFont);
+    --standOutFont: 'Bebas Neue', cursive;
 }
 
 .navbar-brand {
+    font-family: var(--standOutFont);
     transition: 0.5s;
     font-weight: 700;
-    font-size: 200px;
     color: white;
 }
 
 .navbar-brand:hover {
     transition: 0.5s;
     opacity: 0.7;
+    color: white;
 }
 
 #nav {
     background-color: transparent;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
     width: 100%;
 }
 
@@ -63,13 +65,11 @@ a.middle-hover:hover:before {
     transform: scaleX(1);
 }
 
-#jumbo img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+#jumbo {
+    padding: 50px;
+    position: relative;
+    background: url('media/jumbo-pic.jpg');
+    height: 100vh;
 }
 
 #nav.scrolled {
@@ -77,8 +77,76 @@ a.middle-hover:hover:before {
     transition: background-color 200ms linear;
     position: fixed;
     color: black;
+    top: 0;
 }
 
 #nav a.toggleLinkColor {
     color: black;
+}
+
+#jumbo-text {
+    color: white;
+    margin-left: 7vw;
+    margin-top: 15vh;
+}
+
+#jumbo-text a {
+    color: black;
+    background-color: white;
+    padding: 0.7vw 2vw 0.7vw 2vw;
+    border: none;
+    border-radius: 0;
+    font-family: var(--headerFont);
+    margin-left: 30px;
+    transition: 0.5s linear;
+}
+
+#jumbo-text a:hover {
+    opacity: 0.7;
+    font-size: 1vw;
+    transition: 0.5s linear;
+}
+
+#jumbo-text h2 {
+    font-size: 3vw;
+    font-family: var(--standOutFont);
+    padding-bottom: 3vh;
+}
+
+#jumbo-text p {
+    font-size: 1vw;
+    margin-right: 70%;
+    font-family: var(--bodyFont);
+    margin-left: 30px;
+    padding-bottom: 1vw;
+}
+
+/*
+    Our Goal
+*/
+
+#our-goal div {
+    width: 50%;
+    margin: 5vh auto;
+}
+
+#our-goal-icon {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2.5vh;
+    font-size: 250%;
+}
+
+#our-goal div h2 {
+    text-align: center;
+    margin-bottom: 2vh;
+    font-family: var(--standOutFont);
+    font-size: 200%;
+}
+
+#our-goal div p {
+    text-align: center;
+    font-family: var(--bodyFont);
+    margin-left: 12%;
+    margin-right: 12%;
 }

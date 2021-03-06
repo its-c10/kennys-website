@@ -10,8 +10,9 @@
     <title>Index</title>
 
     <link rel="stylesheet" type="text/css" href="{% static '/index_style.css' %}">
-    <script></script>
-    <script src="https://use.fontawesome.com/353b61b212.js"></script>
+
+    <!-- FA -->
+    <script defer src="{% static '/fa/js/all.js' %}"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -38,6 +39,7 @@
 <body>
     {% include "navbar.html" %}
     {% include "jumbotron.html" %}
+    {% include "under-jumbo.html" %}
 </body>
 
 </html>
