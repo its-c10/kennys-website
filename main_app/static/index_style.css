@@ -208,3 +208,75 @@ a.middle-hover:hover:before {
     transition: 0.7s linear;
     opacity: 0.7;
 }
+
+/*
+    FOOTER 
+*/
+
+#footer {
+    background-color: black;
+    color: white;
+}
+
+#footer h2 {
+    font-family: var(--standOutFont);
+    margin-top: 30px;
+    text-align: center;
+}
+
+#stay-connected ul {
+    text-align: center;
+    font-size: 1em;
+    font-family: var(--bodyFont);
+    margin-top: 20px;
+}
+
+#stay-connected li {
+    padding: 2.5px;
+}
+
+#stay-connected a {
+    text-decoration: none;
+    color: darkgray;
+}
+
+#more-about-the-company p {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#under-footer {
+    background-color: #161616;
+    color: hsl(0, 0%, 19%);
+    padding: 10px;
+}
+
+#footer span {
+    margin-left: 10px;
+    font-size: 0.8em;
+}
+
+#under-footer p {
+    margin: 0;
+}
+
+#under-footer div:nth-child(2) p {
+    float: right;
+}
+
+/* Individual social media icons */
+
+#footer-sc {
+    color: yellow;
+}
+
+#footer-ig {
+    color: pink;
+}
+
+#footer-twitter {
+    color: aqua;
+    margin-left: -10px;
+}
