@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <title>Index</title>
 
-    <link rel="stylesheet" type="text/css" href="{% static '/style/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/style/design.css' %}">
 
     <!-- FA -->
     <script defer src="{% static '/fa/js/all.js' %}"></script>
@@ -33,13 +33,14 @@
 
     <!-- Personal javascript use -->
     <script type="text/javascript" src="{% static 'scripts/index.js' %}"></script>
+    <script type="text/javascript" src="{% static 'scripts/get-in-touch.js' %}"></script>
 
 </head>
 
 <body>
     {% include "navbar2.html" %}
     {% include "get-in-touch.html" %}
-
+    {% include "footer.html" %}
 </body>
 
 </html>

@@ -1,4 +1,90 @@
-<div id="get-in-touch" class="text-center mt-5">
-    <h2>Get in touch</h2>
-    <p class="mt-2">We look forward to hearing from you!</p>
+<div id="get-in-touch">
+    <div id="get-in-touch-jumbo">
+        <h2 class="text-center">Get in touch</h2>
+        <p class="mt-2 text-center">We look forward to hearing from you!</p>
+    </div>
+    <div class="row">
+        <div class="col-lg-6" id="contact-info">
+            <div class="text-center">
+                <i class="fas fa-info"></i>
+                <h2>Contact Info</h2>
+            </div>
+            <div class="row text-center" style="margin-top: 70px;">
+                <div class="col-lg-6">
+                    <h4>Call or Text</h4>
+                    <i>571-210-0588</i>
+                    <p>Don't hesitate to call or text. We look forward to hearing from you!</p>
+                </div>
+                <div class="col-lg-6">
+                    <h4>Email</h4>
+                    <i>
+                        <a href="mailto:info@kennysmobiledetail.com">info@kennysmobiledetail.com</a>
+                    </i>
+                    <p>Looking for a more formal approach? Shoot us an email!</p>
+                </div>
+            </div>
+            <div id="social-media-section">
+
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="text-center">
+                <i class="fas fa-feather"></i>
+            </div>
+            <h2 class="text-center">Make an appointment</h2>
+            <form class="mt-5" id="appointment">
+                <div>
+                    <div class="form-group mb-3">
+                        <label for="contact-page-input-email" style="margin-bottom:5px;">Email address</label>
+                        <input type="email" class="form-control" id="contact-page-input-email" placeholder="Enter email...">
+                        <small id="contact-page-email-small" class="form-text text-muted">This allows us to respond back to you</small>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="contact-page-input-firstname" style="margin-bottom:5px;">First Name</label>
+                        <input type="text" class="form-control" id="contact-page-input-firstname" placeholder="Your first name">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="contact-page-input-lastname" style="margin-bottom:5px;">Last Name</label>
+                        <input type="text" class="form-control" id="contact-page-input-lastname" placeholder="Your last name">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="contact-page-input-phonenumber" style="margin-bottom:5px;">Phone Number</label>
+                        <input type="text" class="form-control" id="contact-page-input-phonenumber" placeholder="Your phone number">
+                    </div>
+                    <div class="form-group mb-4 mt-4" style="border-bottom: solid 1px">
+                        <label for="car-quantity-range" class="form-label">How many vehicle(s) would you like detailed?</label>
+                        <input type="range" class="form-range" min="0" max="10" step="1" id="car-quantity-range">
+                        <p>Value: <span id="car-quantity-value"></span></p>
+                    </div>
+                    <div class="form-check" style="border-bottom: solid 1px">
+                        <p class="unortho-label">What service are you interested in?</p>
+                        <select name="service-selection" id="service-selection" class="form-select mb-4" style="margin-left: -25px; width: 50%;">
+                            <option selected>Select a service</option>
+                            <option value="service-1">Stage 1 - Full Exterior Detail - Starting at $50</option>
+                            <option value="service-2">Stage 2 - Full Interior Detail - Starting at $50</option>
+                            <option value="service-3">Stage 3 - Full Detail - Starting at $100</option>
+                            <option value="service-4">Spring Protection Package - Starting at $140</option>
+                            <option value="service-other">Other</option>
+                        </select>
+                        <input style="margin-left: -25px; margin-top: 10px; display: none" type="text" class="form-control" id="service-selection-other-input" placeholder="Specify some other service you may want">
+                    </div> 
+                    <div class="form-check" style="border-bottom: solid 1px">
+                        <p class="unortho-label mt-3">Due to nature of this job being mobile, we will need access to a water spigot with a garden hose and an exterior outlet.</p>
+                        <input class="form-check-input" type="checkbox" name="nature-ack" value="nature-ack-agree" id="nature-ack">
+                        <label class="form-check-label mb-3" for="nature-ack">I agree</label>
+                    </div>
+                    <div class="form-check">
+                        <p class="unortho-label mt-3">Photos will be taken before and after for social media and liability purposes.</p>
+                        <input class="form-check-input" type="checkbox" name="photos-ack-agree" value="photos-ack-agree" id="photos-ack-agree">
+                        <label class="form-check-label" for="nature-ack-agree">I agree</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="photos-no" value="photos-no" id="photos-no">
+                        <label class="form-check-label" for="photos-no">I agree but do not wish to be featured on social media</label>
+                    </div>
+                    <button class="btn btn-dark" type="submit" style="margin-left: 50px; margin-top: 20px;background-color: #d50000; border-color: #d50000; ">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

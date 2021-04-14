@@ -12,5 +12,4 @@ $(function () {
         //$getStartedBtn.toggleClass('displayed', ($(this).scrollTop() - 150) > $leftSideJumbo.height());
 
     });
-
 });

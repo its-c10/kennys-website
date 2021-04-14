@@ -4,16 +4,19 @@
     --headerFont: 'IBM Plex Serif', serif;
     --bodyFont: 'Roboto', sans-serif;
     --standOutFont: 'Bebas Neue', cursive;
+    --footerColor: #161616;
+    --red: #d50000;
 }
 
-.navbar-brand {
+#nav-brand {
     font-family: var(--standOutFont);
     transition: 0.5s;
     font-weight: 700;
     color: white;
+    font-size: 250%;
 }
 
-.navbar-brand:hover {
+.main-nav .container-fluid a:hover {
     transition: 0.5s;
     opacity: 0.7;
     color: white;
@@ -25,6 +28,10 @@
     position: fixed;
     z-index: 1;
     width: 100%;
+}
+
+#nav-bars {
+    display: none;
 }
 
 #nav2 {
@@ -73,7 +80,7 @@ a.middle-hover:hover:before {
 #jumbo {
     padding: 50px;
     position: relative;
-    background: url('media/jumbo-pic.jpg');
+    background: url('../media/jumbo-pic.jpg');
     height: 100vh;
 }
 
@@ -96,26 +103,28 @@ a.middle-hover:hover:before {
 }
 
 #jumbo-text a {
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: var(--red);
     padding: 0.7vw 2vw 0.7vw 2vw;
     border: none;
     border-radius: 0;
-    font-family: var(--headerFont);
+    font-family: var(--standOutFont);
+    font-size: 0.8vw;
     margin-left: 30px;
     transition: 0.5s linear;
 }
 
 #jumbo-text a:hover {
-    opacity: 0.7;
-    font-size: 1vw;
+    opacity: 0.9;
+    color: white;
+    background-color: black;
     transition: 0.5s linear;
 }
 
 #jumbo-text h2 {
     font-size: 3vw;
     font-family: var(--standOutFont);
-    padding-bottom: 3vh;
+    padding-bottom: 1vh;
 }
 
 #jumbo-text p {
@@ -123,7 +132,7 @@ a.middle-hover:hover:before {
     margin-right: 70%;
     font-family: var(--bodyFont);
     margin-left: 30px;
-    padding-bottom: 1vw;
+    padding-bottom: 1vh;
 }
 
 /*
@@ -220,7 +229,7 @@ a.middle-hover:hover:before {
 */
 
 #footer {
-    background-color: black;
+    background-color: var(--footerColor);
     width: 100%;
 }
 
@@ -261,8 +270,9 @@ a.middle-hover:hover:before {
 
 #contact-info ul li {
     width: 100%;
-    background-color: black;
+    background-color: var(--footerColor);
     color: white;
+    border: none;
 }
 
 #contact-info ul {
@@ -270,8 +280,8 @@ a.middle-hover:hover:before {
 }
 
 #under-footer {
-    background-color: #161616;
-    color: hsl(0, 0%, 28%);
+    background-color: var(--footerColor);
+    color: white;
     padding: 15px;
     width: 100%;
 }
@@ -288,4 +298,117 @@ a.middle-hover:hover:before {
 
 #under-footer div:nth-child(2) p {
     float: right;
+}
+
+/*
+    Contact CSS
+*/
+
+#get-in-touch .row {
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#get-in-touch h2 {
+    font-family: var(--headerFont);
+}
+
+#get-in-touch label {
+    font-family: var(--headerFont);
+}
+
+#get-in-touch input {
+    font-family: var(--bodyFont);
+}
+
+#get-in-touch .fa-feather, #get-in-touch .fa-info {
+    font-size: 2vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#get-in-touch form div {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.unortho-label {
+    margin-left: -25px;
+}
+
+#get-in-touch button {
+    font-family: var(--standOutFont);
+}
+
+#contact-info i {
+    color: var(--red);
+}
+
+#contact-info i a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+#contact-info i a:hover {
+    opacity: 0.7;
+    transition: 0.5s linear;
+}
+
+#contact-info p {
+    font-family: var(--bodyFont);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+}
+
+#get-in-touch-jumbo {
+    background: url("../media/contact-info-pic.jpg");
+    padding: 200px;
+    color: white;
+    background-position: top;
+    position: relative;
+}
+
+#get-in-touch-jumbo h2, #get-in-touch-jumbo p {
+    color: white;
+    position: relative;
+}
+
+#get-in-touch-jumbo:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/*
+    Media queries
+*/
+
+@media screen and (max-width: 770px) {
+    /*
+        Nav adjustments
+    */
+    #nav ul {
+        display: none;
+    }
+    #nav div {
+        text-align: center;
+        display: block;
+        padding: 20px;
+    }
+    #nav-brand {
+        font-size: 200%;
+    }
+    #nav-bars {
+        display: block;
+        position: absolute;
+        left: 90%;
+        font-size: 130%;
+    }
 }
