@@ -83,19 +83,21 @@ a.middle-hover:hover:before {
     height: 100vh;
 }
 
-#nav.scrolled {
+#nav.scrolled, #nav2.scrolled {
     background-color: white;
     transition: background-color 200ms linear;
     position: fixed;
     color: black;
     top: 0;
+    z-index: 1;
+    width: 100%;
 }
 
 #nav.i-invert-color {
     color: black;
 }
 
-#nav a.toggleLinkColor {
+#nav a.toggleLinkColor, #nav2 a.toggleLinkColor {
     color: black;
 }
 
@@ -261,6 +263,11 @@ a.middle-hover:hover:before {
 
 #stay-connected a {
     text-decoration: none;
+}
+
+#stay-connected li:hover {
+    opacity: 0.7;
+    transition: linear 0.5s;
 }
 
 #more-about-the-company p {

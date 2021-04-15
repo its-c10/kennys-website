@@ -3,8 +3,9 @@ $(function () {
 
         //let $leftSideJumbo = $("#left-side-jumbo-wrap");
 
-        let $nav = $("#nav");
-        let $linksInNav = $("#nav a");
+        let $nav = $(".main-nav");
+        let $linksInNav = $(".main-nav a");
+
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
         $linksInNav.toggleClass('toggleLinkColor', $(this).scrollTop() > $nav.height());
 
