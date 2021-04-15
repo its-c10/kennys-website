@@ -16,6 +16,11 @@
     font-size: 250%;
 }
 
+.main-nav {
+    width: 100%;
+    z-index: 1;
+}
+
 .main-nav .container-fluid a:hover {
     transition: 0.5s;
     opacity: 0.7;
@@ -36,11 +41,11 @@
 
 #nav2 {
     background-color: black;
+    position: fixed;
 }
 
 .main-nav ul {
     margin-right: 5%;
-    font-family: var(--headerFont);
     font-weight: 500;
     font-size: 100%;
 }
@@ -48,6 +53,7 @@
 .main-nav ul li a {
     color: white;
     transition: 0.5s;
+    font-family: var(--headerFont);
 }
 
 a.middle-hover {
@@ -76,13 +82,6 @@ a.middle-hover:hover:before {
     transform: scaleX(1);
 }
 
-#jumbo {
-    padding: 50px;
-    position: relative;
-    background: url('../media/jumbo-pic.jpg');
-    height: 100vh;
-}
-
 #nav.scrolled, #nav2.scrolled {
     background-color: white;
     transition: background-color 200ms linear;
@@ -99,6 +98,36 @@ a.middle-hover:hover:before {
 
 #nav a.toggleLinkColor, #nav2 a.toggleLinkColor {
     color: black;
+}
+
+/*
+    Hamburger menu
+*/
+
+#hamburger {
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+#hamburger ul {
+    margin-bottom: 0;
+    font-family: var(--headerFont);
+}
+
+/*
+    Jumbo stuff
+*/
+
+#jumbo {
+    padding: 50px;
+    position: relative;
+    background: url('../media/jumbo-pic.jpg');
+    height: 100vh;
 }
 
 #jumbo-text {
