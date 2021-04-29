@@ -39,6 +39,10 @@
     display: none;
 }
 
+#nav-bars:hover {
+    cursor: pointer;
+}
+
 #nav2 {
     background-color: black;
     position: fixed;
@@ -87,9 +91,12 @@ a.middle-hover:hover:before {
     transition: background-color 200ms linear;
     position: fixed;
     color: black;
-    top: 0;
     z-index: 1;
     width: 100%;
+}
+
+#nav.scrolled #nav2.scrolled {
+    top: 0;
 }
 
 #nav.i-invert-color {
@@ -101,22 +108,35 @@ a.middle-hover:hover:before {
 }
 
 /*
-    Hamburger menu
+    Side menu
 */
 
-#hamburger {
-    width: 100%;
+#side-nav {
+    position: fixed;
+    top: 40%;
+    left: -200px;
     background-color: white;
-    position: absolute;
-    z-index: 1;
-    top: 0;
+    z-index: 2;
+    font-family: var(--standOutFont);
+    padding: 20px;
+    font-size: 120%;
+    border: solid white;
+    border-left: none;
+    border-radius: 0px 10px 10px 0px;
+    transition: 0.5s linear;
+}
+
+#side-nav.show {
     left: 0;
+}
+
+#side-nav li {
     padding: 10px;
 }
 
-#hamburger ul {
-    margin-bottom: 0;
-    font-family: var(--headerFont);
+#side-nav a {
+    text-decoration: none;
+    color: black;
 }
 
 /*
@@ -150,8 +170,8 @@ a.middle-hover:hover:before {
 
 #jumbo-text a:hover {
     opacity: 0.9;
-    color: white;
-    background-color: black;
+    color: red;
+    background-color: white;
     transition: 0.5s linear;
 }
 
@@ -445,6 +465,12 @@ a.middle-hover:hover:before {
     }
 }
 
+@media screen and (min-width: 771px) {
+    #side-nav {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 770px) {
     /*
         Nav adjustments
@@ -455,8 +481,6 @@ a.middle-hover:hover:before {
     .main-nav div {
         text-align: center;
         display: block;
-        color: red;
-        padding: 20px;
     }
     #nav-brand {
         font-size: 200%;
@@ -465,8 +489,12 @@ a.middle-hover:hover:before {
         display: block;
         position: absolute;
         left: 90%;
+        top: 33%;
         font-size: 130%;
         color: white;
+    }
+    #side-nav {
+        display: block;
     }
 }
 
