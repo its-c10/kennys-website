@@ -34,15 +34,20 @@
     <!-- Personal javascript use -->
     <script type="text/javascript" src="{% static 'scripts/index.js' %}"></script>
 
+    <style>
+        #nav2 ul .nav-item:nth-child(2) a{
+            color: var(--red);
+            text-decoration: underline;
+            font-weight: 700;
+        }
+    </style>
+
 </head>
 
 <body>
     {% include "navbar2.html" %}
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <h1>Testing {{gallery.gallery_images}}</h1>
+    {% include "side-nav.html" %}
+    {% include "gallery/gallery-content.html"%}
 </body>
 
 </html>

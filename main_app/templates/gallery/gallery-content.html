@@ -1,0 +1,47 @@
+<head>
+    {% load static %}
+</head>
+<div id="gallery-content">
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-secondary">
+            <a href="{% url 'main_app:gallery_all' main_app.view_type=all %}">All</a>
+        </button>
+        <button type="button" class="btn btn-secondary">
+            <a href="{% url 'main_app:gallery_s1' view_type=all %}">Stage 1 Details</a>
+        </button>
+         <button type="button" class="btn btn-secondary">
+            <a href="{% url 'main_app:gallery_s2' view_type=all %}">Stage 2 Details</a>
+        </button>
+         <button type="button" class="btn btn-secondary">
+            <a href="{% url 'main_app:gallery_sf' view_type=all %}">Snow Foamed</a>
+        </button>
+         <button type="button" class="btn btn-secondary">
+            <a href="{% url 'main_app:gallery_id' view_type=all %}">Interior Details</a>
+        </button>
+         <button type="button" class="btn btn-secondary">
+            <a href="{% url 'main_app:gallery_other' view_type=all %}">Other</a>
+        </button>
+    </div>
+
+    {% for image in gallery %}
+
+        {% if forloop.counter|divisibleby:3 or forloop.first %}
+            <h1>{{forloop.counter}}</h1>
+            <div class="row">
+        {% endif %}
+
+        <div class="col-lg-6">
+            <div class="gallery-photo-wrapper">
+                <img src="../../media/{{image.photo}}" class="gallery-photo">
+            </div>
+            <h2>{{ image.car_name }}</h2>
+        </div>
+
+        {% if forloop.counter|divisibleby:4 %}
+            </div>
+        {% endif %}
+        
+    {% endfor %}
+
+</div>

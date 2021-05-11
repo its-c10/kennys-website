@@ -6,6 +6,7 @@
     --standOutFont: 'Bebas Neue', cursive;
     --footerColor: #161616;
     --red: #d50000;
+    --grey: #abcaed;
 }
 
 #nav-brand {
@@ -444,6 +445,48 @@ a.middle-hover:hover:before {
     left: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.4);
+}
+
+/*
+    Gallery
+*/
+
+#gallery-content {
+    position: relative;
+    padding-top: 150px;
+}
+
+#gallery-content .btn-group {
+    display: block;
+    text-align: center;
+}
+
+#gallery-content .btn-group button {
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 5px 25px 5px 25px;
+    font-family: var(--headerFont);
+    background-color: var(--footerColor);
+    border-color: var(--footerColor);
+}
+
+#gallery-content .btn-group button a {
+    color: white;
+    text-decoration: none;
+}
+
+#gallery-content .btn-group button .active {
+    background-color: var(--red);
+    border-color: var(--red);
+}
+
+#gallery-content .gallery-photo {
+    width: 80%;
+}
+
+#gallery-content .gallery-photo-wrapper {
+    display: block;
+    text-align: center;
 }
 
 /*
