@@ -42,12 +42,46 @@
         }
     </style>
 
+    <script type="text/javascript">
+    
+        document.getElementById("nav").onload = function() {changeButtonColor()};
+
+        function getParam(name)
+        {  
+            name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");  
+            var regexS = "[\\?&]"+name+"=([^&#]*)";  
+            var regex = new RegExp( regexS );  
+            var results = regex.exec(window.location.href);
+            if(results == null)
+                return "";  
+            else    
+                return results[1];
+        }
+
+        function changeButtonColor(){
+
+            view_type = getParam("view_type");
+            button_that_needs_changing = null;
+            if(view_type != ""){
+                button_that_needs_changing = document.getElementsByName(view_type + "_button")[0];
+            }else{
+                button_that_needs_changing = document.getElementsByName("all_button")[0];
+            }
+
+            button_that_needs_changing.style.backgroundColor = "var(--red)";
+            button_that_needs_changing.style.borderColor = "var(--red)";
+            
+        }
+
+    </script>
+
 </head>
 
-<body>
+<body onload="changeButtonColor()">
     {% include "navbar2.html" %}
     {% include "side-nav.html" %}
     {% include "gallery/gallery-content.html"%}
+    {% include "footer.html"%}
 </body>
 
 </html>

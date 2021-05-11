@@ -482,11 +482,23 @@ a.middle-hover:hover:before {
 
 #gallery-content .gallery-photo {
     width: 80%;
+    border: solid;
+    padding: 10px;
 }
 
 #gallery-content .gallery-photo-wrapper {
     display: block;
     text-align: center;
+}
+
+.gallery-row {
+    padding-top: 100px;
+}
+
+.gallery-row h2 {
+    font-family: var(--headerFont);
+    margin-left: 15%;
+    margin-top: 10px;
 }
 
 /*

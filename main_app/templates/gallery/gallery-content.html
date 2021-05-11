@@ -4,22 +4,22 @@
 <div id="gallery-content">
 
     <div class="btn-group">
-        <button type="button" class="btn btn-secondary">
+        <button type="button" class="btn btn-secondary" name="all_button">
             <a href="?view_type=all">All</a>
         </button>
-        <button type="button" class="btn btn-secondary">
+        <button type="button" class="btn btn-secondary" name="stage_1_button">
             <a href="?view_type=stage_1">Stage 1 Details</a>
         </button>
-         <button type="button" class="btn btn-secondary">
+         <button type="button" class="btn btn-secondary" name="stage_2_button">
             <a href="?view_type=stage_2">Stage 2 Details</a>
         </button>
-         <button type="button" class="btn btn-secondary">
+         <button type="button" class="btn btn-secondary" name="snow_foamed_button">
             <a href="?view_type=snow_foamed">Snow Foamed</a>
         </button>
-         <button type="button" class="btn btn-secondary">
+         <button type="button" class="btn btn-secondary" name="interior_detail_button">
             <a href="?view_type=interior_detail">Interior Details</a>
         </button>
-         <button type="button" class="btn btn-secondary">
+         <button type="button" class="btn btn-secondary" name="other_button">
             <a href="?view_type=other">Other</a>
         </button>
     </div>
@@ -27,8 +27,7 @@
     {% for image in gallery %}
 
         {% if forloop.counter|divisibleby:3 or forloop.first %}
-            <h1>{{forloop.counter}}</h1>
-            <div class="row">
+            <div class="row gallery-row">
         {% endif %}
 
         <div class="col-lg-6">
