@@ -5,19 +5,19 @@ import datetime
 # Create your models here.
 class GalleryImage(models.Model):
 
-    STAGE_1_DETAIL = "Stage 1"
-    STAGE_2_DETAIL = "Stage 2"
-    INTERIOR_DETAIL = "Interior Detail"
-    SNOW_FOAMED = "Snow Foamed Detail"
-    OTHER = "Other"
+    STAGE_1_DETAIL = "stage_1"
+    STAGE_2_DETAIL = "stage_2"
+    INTERIOR_DETAIL = "interior_detail"
+    SNOW_FOAMED = "snow_foamed"
+    OTHER = "other"
 
     car_name = models.CharField(max_length=255)
     DETAIL_TYPE_CHOICES = [
-        (STAGE_1_DETAIL, STAGE_1_DETAIL),
-        (STAGE_2_DETAIL, STAGE_2_DETAIL),
-        (INTERIOR_DETAIL, INTERIOR_DETAIL),
-        (SNOW_FOAMED, SNOW_FOAMED),
-        (OTHER, OTHER),
+        (STAGE_1_DETAIL, "Stage 1"),
+        (STAGE_2_DETAIL, "Stage 2"),
+        (INTERIOR_DETAIL, "Interior Detail"),
+        (SNOW_FOAMED, "Snow Foamed"),
+        (OTHER, "Other"),
     ]
     detail_type = models.CharField(
         max_length=18,

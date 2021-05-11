@@ -15,13 +15,17 @@ def contact(request):
 def gallery(request, view_type="none"):
 
     view_type = request.GET.get("view_type")
-    print("VIEW TYPE:", view_type)
     gallery_images = GalleryImage.objects.all()
     selected_gallery_images = []
 
-    if view_type != "none":
+    if view_type != None and view_type != "all":
         for image in gallery_images:
-            if image.detail_type == view_type:
+            print("VIEW TYPE", view_type)
+
+            detail_type = image.detail_type
+            proper_detail_type_name = detail_type.lower().replace(" ", "_")
+            print("DETAIL TYPE", proper_detail_type_name)
+            if proper_detail_type_name == view_type:
                 selected_gallery_images.append(image)
     else:
         selected_gallery_images = gallery_images
