@@ -468,6 +468,8 @@ a.middle-hover:hover:before {
     font-family: var(--headerFont);
     background-color: var(--footerColor);
     border-color: var(--footerColor);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #gallery-content .btn-group button a {
@@ -480,25 +482,35 @@ a.middle-hover:hover:before {
     border-color: var(--red);
 }
 
-#gallery-content .gallery-photo {
-    width: 80%;
-    border: solid;
-    padding: 10px;
-}
-
 #gallery-content .gallery-photo-wrapper {
-    display: block;
-    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
 }
 
 .gallery-row {
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .gallery-row h2 {
+    font-family: var(--bodyFont);
+    margin-left: 10%;
+    font-size: 130%;
+    margin-top: 15px;
+}
+
+#gallery-header {
     font-family: var(--headerFont);
-    margin-left: 15%;
-    margin-top: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#gallery-content button:hover {
+    color: white;
+    background-color: var(--red);
+    border-color: var(--red);
+    transition: 0.5s linear;
 }
 
 /*

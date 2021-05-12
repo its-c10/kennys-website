@@ -1,7 +1,11 @@
 <head>
     {% load static %}
 </head>
+
+
 <div id="gallery-content">
+
+    <h2 class="text-center" id="gallery-header">Previous Work</h2>
 
     <div class="btn-group">
         <button type="button" class="btn btn-secondary" name="all_button">
@@ -31,10 +35,10 @@
         {% endif %}
 
         <div class="col-lg-6">
-            <div class="gallery-photo-wrapper">
-                <img src="../../media/{{image.photo}}" class="gallery-photo">
+            <div class="card gallery-photo-wrapper">
+                <img src="../../media/{{image.photo}}" class="card-img-top gallery-photo">
             </div>
-            <h2>{{ image.car_name }}</h2>
+            <h2 class="font-italic card-text">{{ image.car_name }}</h2>
         </div>
 
         {% if forloop.counter|divisibleby:4 %}
