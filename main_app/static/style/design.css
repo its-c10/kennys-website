@@ -46,7 +46,6 @@
 
 #nav2 {
     background-color: black;
-    position: fixed;
 }
 
 .main-nav ul {
@@ -511,6 +510,68 @@ a.middle-hover:hover:before {
     background-color: var(--red);
     border-color: var(--red);
     transition: 0.5s linear;
+}
+
+/*
+    Services
+*/
+
+#services-grid {
+    width: 100%;
+    position: relative;
+}
+
+.services-grid-square {
+    position: relative;
+    height: 45vh;
+}
+
+.services-grid-square::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url("../media/contact-info-pic.jpg");
+    background-size: cover;
+    opacity: .7;
+}
+
+.services-grid-square a {
+    position: relative;
+    font-family: var(--standOutFont);
+    text-align: center;
+    font-size: 200%;
+    text-decoration: none;
+    color: black;
+}
+
+.services-grid-square a:hover {
+    transition: 0.5s linear;
+    font-size: 205%;
+    color: var(--red);
+}
+
+.center-vert-horiz {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#services-modal {
+    padding: 30px;
+    background-color: blue;
+    display: none;
+}
+
+#services-modal h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-family: var(--standOutFont);
 }
 
 /*

@@ -33,56 +33,24 @@
 
     <!-- Personal javascript use -->
     <script type="text/javascript" src="{% static 'scripts/index.js' %}"></script>
+    <script type="text/javascript" src="{% static 'scripts/services.js' %}"></script>
 
-    <style>
-        #nav2 ul .nav-item:nth-child(2) a{
+     <style>
+        #nav2 ul .nav-item:nth-child(3) a{
             color: var(--red);
             text-decoration: underline;
             font-weight: 700;
         }
     </style>
 
-    <script type="text/javascript">
-    
-        document.getElementById("nav").onload = function() {changeButtonColor()};
-
-        function getParam(name)
-        {  
-            name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");  
-            var regexS = "[\\?&]"+name+"=([^&#]*)";  
-            var regex = new RegExp( regexS );  
-            var results = regex.exec(window.location.href);
-            if(results == null)
-                return "";  
-            else    
-                return results[1];
-        }
-
-        function changeButtonColor(){
-
-            view_type = getParam("view_type");
-            button_that_needs_changing = null;
-            if(view_type != ""){
-                button_that_needs_changing = document.getElementsByName(view_type + "_button")[0];
-            }else{
-                button_that_needs_changing = document.getElementsByName("all_button")[0];
-            }
-
-            button_that_needs_changing.style.backgroundColor = "var(--red)";
-            button_that_needs_changing.style.borderColor = "var(--red)";
-            
-        }
-
-    </script>
-
 </head>
 
-<body onload="changeButtonColor()">
-    {% include "navbar2.html" %}
-    {% include "side-nav.html" %}
-    {% include "gallery/gallery-content.html"%}
-    <br><br>
-    {% include "footer.html"%}
+<body>
+
+    {% include "nav/navbar2.html" %}
+    {% include "nav/side-nav.html" %}
+    {% include "services/services-grid.html" %}
+    
 </body>
 
 </html>

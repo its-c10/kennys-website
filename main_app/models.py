@@ -27,3 +27,16 @@ class GalleryImage(models.Model):
 
     date_added = models.DateField(default=datetime.date.today)
     photo = models.ImageField(upload_to="gallery_cars")
+
+    def __str__(self) -> str:
+        return self.car_name + " | " + self.detail_type
+
+
+class Service(models.Model):
+
+    service_type = models.CharField(max_length=50)
+    price = models.IntegerField()
+    description = models.TextField()
+
+    def __str__(self) -> str:
+        return self.service_type
