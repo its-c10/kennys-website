@@ -93,9 +93,6 @@ a.middle-hover:hover:before {
     color: black;
     z-index: 1;
     width: 100%;
-}
-
-#nav.scrolled #nav2.scrolled {
     top: 0;
 }
 
@@ -523,19 +520,7 @@ a.middle-hover:hover:before {
 
 .services-grid-square {
     position: relative;
-    height: 45vh;
-}
-
-.services-grid-square::before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-image: url("../media/contact-info-pic.jpg");
-    background-size: cover;
-    opacity: .7;
+    height: 30vh;
 }
 
 .services-grid-square a {
@@ -548,9 +533,12 @@ a.middle-hover:hover:before {
 }
 
 .services-grid-square a:hover {
+    color: black;
+}
+
+.service-square-wrap:hover {
     transition: 0.5s linear;
-    font-size: 205%;
-    color: var(--red);
+    cursor: pointer;
 }
 
 .center-vert-horiz {
@@ -564,14 +552,52 @@ a.middle-hover:hover:before {
 
 #services-modal {
     padding: 30px;
-    background-color: blue;
+    background-color: white;
     display: none;
+    border: solid 1px;
+    width: 50%;
+    border-radius: 10px;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s linear;
 }
 
 #services-modal h2 {
     text-align: center;
     margin-top: 10px;
     font-family: var(--standOutFont);
+}
+
+#services-header {
+    font-family: var(--standOutFont);
+    font-size: 300%;
+    text-align: center;
+    position: relative;
+}
+
+#services-modal.show {
+    display: block;
+    transition: 0.5s linear;
+}
+
+#services-banner {
+    width: 100%;
+    position: relative;
+    height: 40vh;
+}
+
+#services-banner::before {
+    content: "";
+    background-image: url("../media/contact-info-pic.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
 }
 
 /*

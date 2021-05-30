@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from .models import GalleryImage
+from .models import Service
 from django.http import HttpResponse
 from django.template import loader
 
-# Create your views here.
+
 def index(request):
     return render(request, "home/index.html", context={})
 
@@ -13,7 +14,11 @@ def contact(request):
 
 
 def services(request):
-    return render(request, "services/services.html", context={})
+
+    services = Service.objects.all()
+    context_dict = {"services": services}
+
+    return render(request, "services/services.html", context_dict)
 
 
 def gallery(request, view_type="none"):

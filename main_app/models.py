@@ -37,6 +37,7 @@ class Service(models.Model):
     service_type = models.CharField(max_length=50)
     price = models.IntegerField()
     description = models.TextField()
+    icon = models.CharField(max_length=50)
 
     def __str__(self) -> str:
         return self.service_type

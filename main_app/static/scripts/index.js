@@ -2,7 +2,6 @@ $(document).ready(function () {
     $("#nav-bars-wrapper").click(function () {
         $("#side-nav").toggleClass('show');
     });
-
 });
 
 $(function () {
@@ -12,7 +11,7 @@ $(function () {
         let $nav = $(".main-nav");
         let $linksInNav = $(".main-nav a");
 
-        var shouldTurnNavWhite = $(this).scrollTop() > $nav.height();
+        var shouldTurnNavWhite = $(this).scrollTop() > 10;
 
         $nav.toggleClass('scrolled', shouldTurnNavWhite);
         $linksInNav.toggleClass('toggleLinkColor', shouldTurnNavWhite);

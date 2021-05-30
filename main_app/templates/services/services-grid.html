@@ -1,31 +1,42 @@
 <div id="services-grid">
-    <div class="row" style="margin: 0;padding: 0; width: 100%">
-        <div class="col-lg-6 services-grid-square">
-            <div class="center-vert-horiz">
-                <a href="#" id="stage-1" onclick="openModal(this.id)">Testing</a>
-            </div>
-        </div>
-        <div class="col-lg-6 services-grid-square">
-            <div class="center-vert-horiz">
-                <a href="#" id="stage-2" onclick="openModal(this.id)">Testing</a>
-            </div>
+    
+    <div id="services-banner">
+        <div class="center-vert-horiz">
+            <h2 id="services-header">Services</h2>
         </div>
     </div>
-    <div class="row" style="margin: 0;padding: 0; width: 100%">
+
+    {% for service in services %}
+
+        {% if forloop.counter|divisibleby:3 or forloop.first %}
+            <div class="row" style="margin: 0; padding: 0; width: 100%">
+        {% endif %}
+
         <div class="col-lg-6 services-grid-square">
             <div class="center-vert-horiz">
-                <a href="#" id="stage-3" onclick="openModal(this.id)">Testing</a>
+                <div class="service-square-wrap" onclick="openModal('{{service.service_type}}', '{{service.price}}', '{{service.description}}')">
+                    <div style="text-align: center">
+                        <i class="{{service.icon}}" style="font-size: 200%; margin-top: 10px; margin-bottom: 10px;"></i>
+                    </div>  
+                    <a href="#" id="{{service.html_id}}">{{service.service_type}}</a>
+                    <div style="text-align: center">
+                        <i>Click to see description</i>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-6 services-grid-square">
-            <div class="center-vert-horiz">
-                <a href="#" id="wint_prot" onclick="openModal(this.id)">Testing</a>
+
+        {% if forloop.counter|divisibleby:4 %}
             </div>
-        </div>
-    </div>
+        {% endif %}
+        
+    {% endfor %}
+
 </div>
 
-<div id="services-modal" class="center-vert-horiz">
+<div id="services-modal">
     <h2></h2>
-    <div></div>
+    <div>
+        <p></p>
+    </div>
 </div>  
