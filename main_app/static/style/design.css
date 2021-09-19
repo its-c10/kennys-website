@@ -443,6 +443,26 @@ a.middle-hover:hover:before {
     background: rgba(0, 0, 0, 0.4);
 }
 
+#service-selection {
+    margin-left: -25px;
+    width: 50%;
+}
+
+#service-selection-other-input {
+    display: none;
+    margin-left: -25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#contact-submit {
+    text-align: center;
+    margin-top: 20px;
+    background-color: var(--red);
+    border-color: var(--red);
+    width: 40%;
+}
+
 /*
     Gallery
 */
